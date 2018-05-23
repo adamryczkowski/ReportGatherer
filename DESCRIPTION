@@ -1,0 +1,28 @@
+Package: ReportGatherer
+Type: Package
+Title: Hierarchy of R6 classes that build a pander report 
+Version: 1.0.0
+Author: Adam Ryczkowski
+Maintainer: Adam Ryczkowski <adam@statystyka.net>
+Description: The package allow building a report that is implemented as a acyclic tree structure, with
+    nodes that represent various report elements. Each node belongs to the class hierarchy using object inheritance.
+    For better performance each node can implement a pre-render stage, that can be trivially parallelized.
+    Supports the following objects: paragraph_text, section, table, ggchar, generic_chart among others.
+License: GNU v3
+Encoding: UTF-8
+LazyData: true
+Imports:
+  R6,
+  checkmate,
+  pander,
+  pathcat,
+  dplyr,
+  data.table,
+  digest,
+  stringr,
+  danesurowe,
+  plyr
+Remotes: 
+  adamryczkowski/pathcat,
+  adamryczkowski/danesurowe
+RoxygenNote: 6.0.1
